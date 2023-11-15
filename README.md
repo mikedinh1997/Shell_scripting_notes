@@ -22,7 +22,9 @@ MAC OS
 ### If directory does not exists, create one
 ```sh
   set dir = "A directory"
-  if (! -d $dir) then
+  if (! -d "$dir") then
     mkdir
   endif
 ```
+
+Putting a directory between a quote is necessary for the shell to grab the whole string especially the path contains space. Also, it is a good practice.  
